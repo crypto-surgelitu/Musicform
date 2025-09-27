@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Survey Form</title>
+</head>
+<body>
+  <main>
+    <form id="survey-form" action="" method="POST">
+      <header>
+        <h1 id="title">Music Habits & Preferences Survey</h1>
+        <p id="description">Help us understand your music habits so we can create better playlists and events for you.</p>
+      </header>
+
+      <fieldset>
+        <legend>Personal Information</legend>
+        <div>
+          <label id="name-label" for="name">Your Name</label>
+          <input id="name" type="text" name="name" placeholder="Enter your full name" required />
+        </div>
+
+        <div>
+          <label id="email-label" for="email">Email Address</label>
+          <input id="email" type="email" name="email" placeholder="Enter your email" required />
+        </div>
+
+        <div>
+          <label id="number-label" for="number">Age (optional)</label>
+<input 
+  id="number" 
+  type="number" 
+  name="number" 
+  min="18" 
+  max="100" 
+  placeholder="Age"
+/>
+
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferences on Music & Habits</legend>
+        <div>
+          <label for="concerts">How many concerts do you attend per year?</label>
+          <input id="concerts" name="concerts" type="number" min="0" max="100" placeholder="0-100" required />
+        </div>
+
+        <div>
+          <label for="dropdown">Your favorite way to listen to music</label>
+          <select id="dropdown" name="music">
+            <option value="streaming">Streaming Services</option>
+            <option value="radio">Radio</option>
+            <option value="vinyl">Vinyl/CD</option>
+            <option value="live">Live Performances</option>
+          </select>
+        </div>
+
+        <div>
+          <p>How often do you listen to music?</p>
+          <input type="radio" id="daily" name="frequency" value="daily" />
+          <label for="daily">Daily</label>
+          <input type="radio" id="several-times-week" name="frequency" value="several-times-week" />
+          <label for="several-times-week">Several times a week</label>
+          <input type="radio" id="monthly" name="frequency" value="monthly" />
+          <label for="monthly">Monthly</label>
+
+          <input type="radio" id="weekly" name="frequency" value="weekly" />
+          <label for="weekly">Weekly</label>
+        </div>
+
+        <div>
+          <p>Which genres do you enjoy?</p>
+          <input type="checkbox" id="rock" name="genres" value="rock" />
+          <label for="rock">Rock</label>
+
+          <input type="checkbox" id="pop" name="genres" value="pop" />
+          <label for="pop">Pop</label>
+          <input type="checkbox" id="jazz" name="genres" value="jazz" />
+          <label for="jazz">Jazz</label>
+          <input type="checkbox" id="classical" name="genres" value="classical" />
+          <label for="classical">Classical</label>
+          <input type="checkbox" id="hiphop" name="genres" value="hiphop" />
+          <label for="hiphop">Hip-Hop</label>
+        </div>
+      </fieldset>
+
+      <div>
+        <label for="suggestions">Any suggestions or favourite artists we should feature?</label>
+        <textarea id="suggestions" name="suggestions" rows="4"></textarea>
+      </div>
+
+      <button id="submit" type="submit">Submit</button>
+    </form>
+  </main>
+</body>
+</html>
